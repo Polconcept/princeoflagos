@@ -14,6 +14,9 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
@@ -98,41 +101,47 @@
     </style>
 </head>
 <body class="bg-black text-white font-sans">
-    <!-- Header -->
-    <header class="absolute top-0 left-0 right-0 z-20 px-6 py-8 lg:px-12">
-        <div class="flex items-center">
-            <div class="text-xl font-bold text-white tracking-wider">
-                PrinceofLagos
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section - Two Column Layout -->
-    <section class="h-screen relative overflow-hidden">
-        <!-- Background Image with Gradient Overlay -->
-        <!-- Background Image with Gradient Overlay -->
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen lg:min-h-screen relative overflow-hidden">
+        <!-- Separate height controls for mobile and desktop -->
+        <style>
+            /* Mobile and tablet: more height for image */
+            @media (max-width: 1023px) {
+                .hero-section {
+                    min-height: 200vh !important;
+                }
+            }
+            /* Desktop: original height */
+            @media (min-width: 1024px) {
+                .hero-section {
+                    min-height: 120vh !important;
+                }
+            }
+        </style>
+        <!-- Background Image -->
         <div
-            class="absolute inset-0 bg-cover bg-left bg-no-repeat"
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style="background-image: url('Public/img/Background2.jpg');"
-        ></div>
+        />
 
-        <!-- Dark Gradient Overlay -->
-        <!-- Dark Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-black/30"></div>
+        <!-- Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-primary/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-primary/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-        <!-- Blue Gradient Accent -->
-        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/30 to-transparent"></div>
-                 <!-- Angled Gradient Overlay - Black to Brown -->
-         <div class="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-primary/30"></div>
-         <!-- Additional angled overlay for better coverage -->
-         <div class="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-primary/20"></div>
+        <!-- Header -->
+        <header class="absolute top-0 left-0 right-0 z-20 px-6 py-8 lg:px-12">
+            <div class="text-lg font-bold text-white tracking-wider">
+                Daniel Akitoye
+            </div>
+        </header>
 
-        <div class="relative z-10 px-6 py-16 lg:px-12 lg:py-20">
+        <div class="relative z-10 px-6 py-24 lg:px-12 lg:py-32">
             <div class="max-w-7xl mx-auto">
                 <!-- Mobile Layout -->
-                <div class="block lg:hidden">
+                <div class="block lg:hidden flex flex-col h-full">
                     <!-- Text Content -->
-                    <div class="space-y-6 pt-8 pr-6 pb-4">
+                    <div class="space-y-6 pt-16 pr-6 pb-4">
                         <div class="space-y-3">
                             <h1 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
                                 Never Limit Your Ability To Make
@@ -151,24 +160,55 @@
                                 rules of the digital game.
                             </p>
                             <p class="text-base lg:text-lg font-medium text-white">
-                                Known for teaching young entrepreneurs how to build a valuable clientele.
+                                Also known for teaching young entrepreneurs how to build a valuable clientele.
                             </p>
                         </div>
 
                         <div class="pt-4 pb-2">
-                            <a href="https://praiseteaches.com/" target="_blank" class="inline-block">
+                            <a href="https://remotewealth.academy/" target="_blank" class="inline-block">
                                 <button class="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm">
                                     Learn From Daniel
                                 </button>
                             </a>
                         </div>
+
+                        <!-- Social Media Buttons -->
+                        <div class="pt-4 space-y-3">
+                            <!-- FIND WITH ME -->
+                            <div class="space-y-2">
+                                <p class="text-white text-sm font-semibold">FIND WITH ME</p>
+                                <div class="flex space-x-3">
+                                    <a href="https://www.facebook.com/share/1A9GKrJZi3/" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <span class="text-white font-bold text-sm">f</span>
+                                    </a>
+                                    <a href="https://x.com/princeoflagos_?s=09" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <span class="text-white font-bold text-sm">𝕏</span>
+                                    </a>
+                                    <a href="https://www.instagram.com/princeoflagos__?igsh=MWVlNmJtNXRzeXZnZw==" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <i class="fa-brands fa-instagram text-white text-sm"></i>
+                                    </a>
+                                    <a href="mailto:daniel@techintelligentsia.com" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <span class="text-white font-bold text-sm">✉</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-
+                    <!-- Mobile Image - Now below socials -->
+                    <div class="flex justify-center px-6 items-end mt-auto">
+                        <div class="relative w-full max-w-sm">
+                            <img 
+                                src="Public/img/9.png"
+                                alt="Daniel Akitoye - PrinceofLagos"
+                                class="w-full h-[450px] md:h-[550px] object-cover object-top rounded-lg"
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Desktop Layout -->
-                <div class="hidden lg:grid lg:grid-cols-2 gap-16 items-center h-full">
+                <div class="hidden lg:grid lg:grid-cols-2 gap-16 items-start min-h-full">
                     <!-- LEFT SIDE - Text Content -->
                     <div class="space-y-6 pt-8 lg:pt-8 pr-6 pb-8">
                         <div class="space-y-3">
@@ -189,26 +229,48 @@
                                 rules of the digital game.
                             </p>
                             <p class="text-base lg:text-lg font-medium text-white">
-                                Known for teaching young entrepreneurs how to build a valuable clientele.
+                                Also known for teaching young entrepreneurs how to build a valuable clientele.
                             </p>
                         </div>
 
                         <div class="pt-4 pb-4">
-                            <a href="https://praiseteaches.com/" target="_blank" class="inline-block">
+                            <a href="https://remotewealth.academy/" target="_blank" class="inline-block">
                                 <button class="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm">
                                     Learn From Daniel
                                 </button>
                             </a>
                         </div>
+
+                        <!-- Social Media Buttons -->
+                        <div class="pt-4 space-y-3">
+                            <!-- FIND WITH ME -->
+                            <div class="space-y-2">
+                                <p class="text-white text-sm font-semibold">FIND WITH ME</p>
+                                <div class="flex space-x-3">
+                                    <a href="https://www.facebook.com/share/1A9GKrJZi3/" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <span class="text-white font-bold text-sm">f</span>
+                                    </a>
+                                    <a href="https://x.com/princeoflagos_?s=09" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <span class="text-white font-bold text-sm">𝕏</span>
+                                    </a>
+                                    <a href="https://www.instagram.com/princeoflagos__?igsh=MWVlNmJtNXRzeXZnZw==" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <i class="fa-brands fa-instagram text-white text-sm"></i>
+                                    </a>
+                                    <a href="mailto:daniel@techintelligentsia.com" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors">
+                                        <span class="text-white font-bold text-sm">✉</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- RIGHT SIDE - Prince Image -->
-                    <div class="flex justify-center lg:justify-end h-full items-end">
+                    <div class="flex justify-center lg:justify-end h-full items-start -mt-12">
                         <div class="relative w-full max-w-md lg:max-w-none">
                             <img 
                                 src="Public/img/9.png"
                                 alt="Daniel Akitoye - PrinceofLagos"
-                                class="w-full h-[500px] md:h-[600px] lg:h-[600px] xl:h-[700px] object-cover object-top rounded-lg lg:rounded-none"
+                                class="w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[750px] object-cover object-center rounded-lg lg:rounded-none"
                             />
                         </div>
                     </div>
@@ -236,8 +298,8 @@
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-10">
                 <div class="space-y-2">
-                    <p class="text-primary text-xs font-semibold tracking-wider lowercase">
-                        subscribe to newsletter
+                    <p class="text-primary text-xs font-semibold tracking-wider uppercase">
+                        SUBSCRIBE TO NEWSLETTER
                     </p>
                     <h2 class="text-2xl lg:text-3xl font-bold text-white">
                         GET PREMIUM TRADE SECRETS
@@ -317,8 +379,4 @@
         });
     </script>
 </body>
-</html>
-<a href="https://praiseteaches.com/" class="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm">
-    Learn From Daniel
-</a>
 </html>

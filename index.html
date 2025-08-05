@@ -110,6 +110,22 @@
                 .hero-section {
                     min-height: 170vh !important;
                 }
+                /* Real mobile device adjustments */
+                @media (max-width: 768px) {
+                    .hero-section {
+                        min-height: 140vh !important;
+                    }
+                    /* Reduce padding on mobile to account for browser UI */
+                    .hero-section .relative {
+                        padding-top: 3rem !important;
+                        padding-bottom: 1rem !important;
+                    }
+                    /* Ensure image container has no bottom margin */
+                    .hero-section .flex.justify-center {
+                        margin-bottom: 0 !important;
+                        padding-bottom: 0 !important;
+                    }
+                }
             }
             /* Desktop: original height */
             @media (min-width: 1024px) {

@@ -108,21 +108,28 @@
             /* Mobile and tablet: more height for image */
             @media (max-width: 1023px) {
                 .hero-section {
-                    min-height: 170vh !important;
+                    min-height: 100vh !important;
+                    height: 100vh !important;
                 }
                 /* Real mobile device adjustments */
                 @media (max-width: 768px) {
                     .hero-section {
-                        min-height: 140vh !important;
+                        min-height: 100vh !important;
+                        height: 100vh !important;
                     }
-                    /* Reduce padding on mobile to account for browser UI */
+                    /* Remove all extra padding on mobile */
                     .hero-section .relative {
-                        padding-top: 3rem !important;
-                        padding-bottom: 1rem !important;
+                        padding-top: 1rem !important;
+                        padding-bottom: 0 !important;
                     }
                     /* Ensure image container has no bottom margin */
                     .hero-section .flex.justify-center {
                         margin-bottom: 0 !important;
+                        padding-bottom: 0 !important;
+                    }
+                    /* Reduce text content padding */
+                    .hero-section .space-y-6 {
+                        padding-top: 0.5rem !important;
                         padding-bottom: 0 !important;
                     }
                 }
@@ -152,12 +159,12 @@
             </div>
         </header>
 
-        <div class="relative z-10 px-6 py-24 lg:px-12 lg:py-32">
+        <div class="relative z-10 px-6 py-8 lg:px-12 lg:py-32">
             <div class="max-w-7xl mx-auto">
                 <!-- Mobile Layout -->
                 <div class="block lg:hidden flex flex-col h-full">
                     <!-- Text Content -->
-                    <div class="space-y-6 pt-16 pr-6 pb-4">
+                    <div class="space-y-6 pt-8 pr-6 pb-2">
                         <div class="space-y-3">
                             <h1 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
                                 Never Limit Your Ability To Make

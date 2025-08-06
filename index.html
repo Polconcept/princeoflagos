@@ -98,10 +98,19 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(210, 180, 140, 0.3);
         }
+
+        /* Mobile viewport height fix */
+        @media (max-width: 1023px) {
+            .hero-section {
+                height: calc(var(--vh, 1vh) * 200) !important;
+                min-height: calc(var(--vh, 1vh) * 200) !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-black text-white font-sans">
     <!-- Hero Section -->
+<<<<<<< HEAD
     <section class="hero-section min-h-screen lg:min-h-screen relative overflow-hidden">
         <!-- Separate height controls for mobile and desktop -->
         <style>
@@ -141,6 +150,9 @@
                 }
             }
         </style>
+=======
+    <section class="hero-section min-h-screen lg:min-h-[120vh] relative overflow-hidden">
+>>>>>>> 0f2c8fd (Fixed mobile layout with proper spacing and viewport height fix)
         <!-- Background Image -->
         <div
             class="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -162,9 +174,13 @@
         <div class="relative z-10 px-6 py-8 lg:px-12 lg:py-32">
             <div class="max-w-7xl mx-auto">
                 <!-- Mobile Layout -->
-                <div class="block lg:hidden flex flex-col h-full">
+                <div class="block lg:hidden">
                     <!-- Text Content -->
+<<<<<<< HEAD
                     <div class="space-y-6 pt-8 pr-6 pb-2">
+=======
+                    <div class="space-y-6 pt-32 pb-8">
+>>>>>>> 0f2c8fd (Fixed mobile layout with proper spacing and viewport height fix)
                         <div class="space-y-3">
                             <h1 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
                                 Never Limit Your Ability To Make
@@ -187,7 +203,7 @@
                             </p>
                         </div>
 
-                        <div class="pt-4 pb-2">
+                        <div class="pt-4">
                             <a href="https://remotewealth.academy/" target="_blank" class="inline-block">
                                 <button class="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm">
                                     Learn From Daniel
@@ -218,8 +234,8 @@
                         </div>
                     </div>
 
-                    <!-- Mobile Image - Now below socials -->
-                    <div class="flex justify-center px-6 items-end mt-auto">
+                    <!-- Mobile Image -->
+                    <div class="flex justify-center mt-8">
                         <div class="relative w-full max-w-sm">
                             <img 
                                 src="Public/img/9.png"
@@ -348,6 +364,31 @@
     </footer>
 
     <script>
+        // Mobile viewport height fix
+        function setViewportHeight() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        // Set initial viewport height
+        setViewportHeight();
+        
+        // Update on resize and orientation change
+        window.addEventListener('resize', setViewportHeight);
+        window.addEventListener('orientationchange', function() {
+            setTimeout(setViewportHeight, 100);
+        });
+        
+        // Additional mobile-specific fixes
+        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Force mobile viewport behavior
+            document.addEventListener('DOMContentLoaded', function() {
+                setViewportHeight();
+                // Recalculate after a short delay to handle mobile browser quirks
+                setTimeout(setViewportHeight, 500);
+            });
+        }
+
         // Form handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();

@@ -102,15 +102,28 @@
         /* Mobile viewport height fix */
         @media (max-width: 1023px) {
             .hero-section {
-                height: calc(var(--vh, 1vh) * 200) !important;
-                min-height: calc(var(--vh, 1vh) * 200) !important;
+                min-height: calc(var(--real-vh, 1vh) * 100) !important;
+                height: calc(var(--real-vh, 1vh) * 100) !important;
+            }
+        }
+        /* Desktop: original height */
+        @media (min-width: 1024px) {
+            .hero-section {
+                min-height: 120vh !important;
             }
         }
     </style>
+    <script>
+      function setRealVh() {
+        document.documentElement.style.setProperty('--real-vh', window.innerHeight * 0.01 + 'px');
+      }
+      setRealVh();
+      window.addEventListener('resize', setRealVh);
+    </script>
 </head>
 <body class="bg-black text-white font-sans">
     <!-- Hero Section -->
-    <section class="hero-section min-h-screen lg:min-h-[120vh] relative overflow-hidden">
+    <section class="hero-section relative overflow-hidden">
         <!-- Background Image -->
         <div
             class="absolute inset-0 bg-cover bg-center bg-no-repeat"

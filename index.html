@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PrinceofLagos - Digital Business Strategist</title>
   <meta name="description" content="Daniel Akitoye popularly known as PrinceofLagos is a Digital Business Strategist and AI Compliance Consultant that builds, protects and scales empires.">
 
-  <link rel="icon" type="image/png" href="Public/img/9.png" />
-  <link rel="shortcut icon" type="image/png" href="Public/img/9.png" />
-  <link rel="apple-touch-icon" href="Public/img/9.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Public/img/9.png">
+  <link rel="shortcut icon" type="image/png" href="Public/img/9.png">
+  <link rel="apple-touch-icon" href="Public/img/9.png">
 
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -32,11 +38,52 @@
   </script>
 
   <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d2b48c;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c19a6b;
+    }
+    * {
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+    }
+    input:focus,
+    textarea:focus {
+      box-shadow: 0 0 0 2px rgba(210, 180, 140, 0.2);
+    }
+    .gradient-hero {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2d2d2d 50%, #d2b48c 100%);
+    }
+    .gradient-overlay {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(210, 180, 140, 0.1) 100%);
+    }
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .btn-gradient {
+      background: linear-gradient(45deg, #d2b48c, #c19a6b);
+      transition: all 0.3s ease;
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(45deg, #c19a6b, #b8956a);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(210, 180, 140, 0.3);
+    }
     .hero-section {
       min-height: 100dvh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
       position: relative;
       overflow: hidden;
     }
@@ -45,135 +92,151 @@
         min-height: 120vh;
       }
     }
+    .hero-image-mobile img,
+    .hero-image-desktop img {
+      margin-bottom: -1px;
+    }
   </style>
 </head>
 <body class="bg-black text-white font-sans">
   <!-- Hero Section -->
   <section class="hero-section relative overflow-hidden">
-    <!-- Background Image -->
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('Public/img/Background2.jpg');"></div>
-
-    <!-- Gradient Overlays -->
     <div class="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-primary/30"></div>
     <div class="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-primary/20"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-    <!-- Header -->
-    <header class="absolute top-0 left-0 right-0 z-20 px-6 py-6 lg:px-12">
+    <header class="absolute top-0 left-0 right-0 z-20 px-6 pt-6 lg:px-12">
       <div class="text-lg font-bold text-white tracking-wider">
         Daniel Akitoye
       </div>
     </header>
 
-    <div class="relative z-10 px-6 lg:px-12 flex flex-col flex-1">
-      <div class="max-w-7xl mx-auto flex flex-col flex-1">
+    <div class="relative z-10 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto">
         <!-- Mobile Layout -->
-        <div class="block lg:hidden flex flex-col justify-between flex-1">
-          <!-- Text Content -->
-          <div class="space-y-6 pt-20 pb-4 flex-shrink-0">
-            <div class="space-y-3">
-              <h1 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
-                Never Limit Your Ability To Make
-                <span class="text-primary">Money</span>
-                Because Of Your Current
-                <br/>
-                Circumstance
-              </h1>
-            </div>
-            <div class="space-y-4 text-gray-200 text-base leading-relaxed">
-              <p class="text-base lg:text-lg font-medium text-white">
-                Daniel Akitoye popularly known as
-                <span class="text-primary font-semibold">Princeoflagos</span> is a Digital Business Strategist
-                and an AI Compliance Consultant that builds, protects and scales empires as he quietly rewrites the
-                rules of the digital game.
-              </p>
-              <p class="text-base lg:text-lg font-medium text-white">
-                Also known for teaching young entrepreneurs how to build a valuable clientele.
-              </p>
-            </div>
+        <div class="block lg:hidden">
+          <div class="space-y-6 pt-20 pb-4">
+            <h1 class="text-xl font-extrabold leading-snug text-white">
+              Never Limit Your Ability To Make <span class="text-primary">Money</span> Because Of Your Current<br /> Circumstance
+            </h1>
+            <p class="text-white text-base font-medium">
+              Daniel Akitoye popularly known as <span class="text-primary font-semibold">Princeoflagos</span> is a Digital Business Strategist and an AI Compliance Consultant that builds, protects and scales empires.
+            </p>
+            <p class="text-white text-base font-medium">
+              Also known for teaching young entrepreneurs how to build a valuable clientele.
+            </p>
             <div class="pt-4">
-              <a href="https://remotewealth.academy/" target="_blank" class="inline-block">
+              <a href="https://remotewealth.academy/" target="_blank">
                 <button class="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm">
                   Learn From Daniel
                 </button>
               </a>
             </div>
-            <div class="pt-4 space-y-3">
-              <div class="space-y-2">
-                <p class="text-white text-sm font-semibold">FIND WITH ME</p>
-                <div class="flex space-x-3">
-                  <a href="https://www.facebook.com/share/1A9GKrJZi3/" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><span class="text-white font-bold text-sm">f</span></a>
-                  <a href="https://x.com/princeoflagos_?s=09" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><span class="text-white font-bold text-sm">𝕏</span></a>
-                  <a href="https://www.instagram.com/princeoflagos__?igsh=MWVlNmJtNXRzeXZnZw==" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-instagram text-white text-sm"></i></a>
-                  <a href="mailto:daniel@techintelligentsia.com" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><span class="text-white font-bold text-sm">✉</span></a>
-                </div>
+            <div class="pt-4">
+              <p class="text-white text-sm font-semibold">FIND WITH ME</p>
+              <div class="flex space-x-3">
+                <a href="https://www.facebook.com/share/1A9GKrJZi3/" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <span class="text-white font-bold text-sm">f</span>
+                </a>
+                <a href="https://x.com/princeoflagos_?s=09" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <span class="text-white font-bold text-sm">𝕏</span>
+                </a>
+                <a href="https://www.instagram.com/princeoflagos__?igsh=MWVlNmJtNXRzeXZnZw==" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <i class="fa-brands fa-instagram text-white text-sm"></i>
+                </a>
+                <a href="mailto:daniel@techintelligentsia.com" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <span class="text-white font-bold text-sm">✉</span>
+                </a>
               </div>
             </div>
           </div>
-
-          <!-- Mobile Image -->
-          <div class="flex-grow flex justify-center">
-            <div class="relative w-full max-w-sm h-full">
-              <img src="Public/img/9.png" alt="Daniel Akitoye - PrinceofLagos" class="w-full h-full object-cover object-bottom rounded-lg"/>
-            </div>
+          <div class="hero-image-mobile flex justify-center -mb-1">
+            <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full max-w-sm object-cover object-top rounded-lg">
           </div>
         </div>
 
         <!-- Desktop Layout -->
-        <div class="hidden lg:grid lg:grid-cols-2 gap-16 items-end min-h-full">
-          <!-- LEFT SIDE - Text Content -->
-          <div class="space-y-6 pt-8 lg:pt-8 pr-6 pb-8">
-            <div class="space-y-3">
-              <h1 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
-                Never Limit Your Ability To Make
-                <span class="text-primary">Money</span>
-                Because Of Your Current
-                <br/>
-                Circumstance
-              </h1>
-            </div>
-            <div class="space-y-4 text-gray-200 text-base leading-relaxed">
-              <p class="text-base lg:text-lg font-medium text-white">
-                Daniel Akitoye popularly known as
-                <span class="text-primary font-semibold">Princeoflagos</span> is a Digital Business Strategist
-                and an AI Compliance Consultant that builds, protects and scales empires as he quietly rewrites the
-                rules of the digital game.
-              </p>
-              <p class="text-base lg:text-lg font-medium text-white">
-                Also known for teaching young entrepreneurs how to build a valuable clientele.
-              </p>
-            </div>
+        <div class="hidden lg:grid lg:grid-cols-2 gap-16 items-start">
+          <div class="space-y-6 pt-20 pb-8">
+            <h1 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
+              Never Limit Your Ability To Make <span class="text-primary">Money</span> Because Of Your Current<br /> Circumstance
+            </h1>
+            <p class="text-white text-base lg:text-lg font-medium">
+              Daniel Akitoye popularly known as <span class="text-primary font-semibold">Princeoflagos</span> is a Digital Business Strategist and an AI Compliance Consultant that builds, protects and scales empires.
+            </p>
+            <p class="text-white text-base lg:text-lg font-medium">
+              Also known for teaching young entrepreneurs how to build a valuable clientele.
+            </p>
             <div class="pt-4 pb-4">
-              <a href="https://remotewealth.academy/" target="_blank" class="inline-block">
+              <a href="https://remotewealth.academy/" target="_blank">
                 <button class="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm">
                   Learn From Daniel
                 </button>
               </a>
             </div>
-            <div class="pt-4 space-y-3">
-              <div class="space-y-2">
-                <p class="text-white text-sm font-semibold">FIND WITH ME</p>
-                <div class="flex space-x-3">
-                  <a href="https://www.facebook.com/share/1A9GKrJZi3/" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><span class="text-white font-bold text-sm">f</span></a>
-                  <a href="https://x.com/princeoflagos_?s=09" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><span class="text-white font-bold text-sm">𝕏</span></a>
-                  <a href="https://www.instagram.com/princeoflagos__?igsh=MWVlNmJtNXRzeXZnZw==" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-instagram text-white text-sm"></i></a>
-                  <a href="mailto:daniel@techintelligentsia.com" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary transition-colors"><span class="text-white font-bold text-sm">✉</span></a>
-                </div>
+            <div class="pt-4">
+              <p class="text-white text-sm font-semibold">FIND WITH ME</p>
+              <div class="flex space-x-3">
+                <a href="https://www.facebook.com/share/1A9GKrJZi3/" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <span class="text-white font-bold text-sm">f</span>
+                </a>
+                <a href="https://x.com/princeoflagos_?s=09" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <span class="text-white font-bold text-sm">𝕏</span>
+                </a>
+                <a href="https://www.instagram.com/princeoflagos__?igsh=MWVlNmJtNXRzeXZnZw==" target="_blank" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <i class="fa-brands fa-instagram text-white text-sm"></i>
+                </a>
+                <a href="mailto:daniel@techintelligentsia.com" class="w-10 h-10 bg-black rounded-md flex items-center justify-center hover:bg-primary">
+                  <span class="text-white font-bold text-sm">✉</span>
+                </a>
               </div>
             </div>
           </div>
-
-          <!-- RIGHT SIDE - Prince Image -->
-          <div class="flex justify-end items-end h-full">
-            <div class="relative w-full max-w-md">
-              <img src="Public/img/9.png" alt="Daniel Akitoye - PrinceofLagos" class="w-full h-full object-cover object-bottom rounded-lg lg:rounded-none"/>
-            </div>
+          <div class="hero-image-desktop flex justify-end -mb-1">
+            <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full h-[750px] object-cover object-center rounded-lg lg:rounded-none">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured In, Newsletter, and Footer remain unchanged... -->
+  <!-- Featured In -->
+  <section class="bg-gray-900 border-t border-primary/30">
+    <div class="px-6 py-12 lg:px-12">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-lg font-semibold mb-4 text-white">Featured In</h2>
+        <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-20">
+          <div class="text-white/70 text-xl font-bold hover:text-white transition-colors cursor-pointer">
+            CEO Times Magazine
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="bg-black px-6 py-16 lg:px-12 lg:py-20">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <div class="space-y-2">
+        <p class="text-primary text-xs font-semibold tracking-wider uppercase">SUBSCRIBE TO NEWSLETTER</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">GET PREMIUM TRADE SECRETS</h2>
+      </div>
+    </div>
+    <div class="max-w-2xl mx-auto text-center">
+      <a href="http://www.remotewealth.academy/freebies" target="_blank" class="inline-block">
+        <button class="bg-primary hover:bg-primary-dark text-black font-bold text-sm h-12 px-8 rounded-md uppercase tracking-wide">
+          GAIN ACCESS
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black px-6 py-6 lg:px-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-gray-400 text-xs">© 2025 Princeoflagos</p>
+    </div>
+  </footer>
 </body>
 </html>

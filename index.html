@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PrinceofLagos - Digital Business Strategist</title>
   <meta name="description" content="Daniel Akitoye popularly known as PrinceofLagos is a Digital Business Strategist and AI Compliance Consultant that builds, protects and scales empires.">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="Public/img/9.png" />
-  <link rel="shortcut icon" type="image/png" href="Public/img/9.png" />
-  <link rel="apple-touch-icon" href="Public/img/9.png" />
+  <link rel="icon" type="image/png" href="Public/img/9.png">
+  <link rel="shortcut icon" type="image/png" href="Public/img/9.png">
+  <link rel="apple-touch-icon" href="Public/img/9.png">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -79,7 +79,6 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(210, 180, 140, 0.3);
     }
-
     .hero-section {
       min-height: 100dvh;
       display: flex;
@@ -88,14 +87,11 @@
       position: relative;
       overflow: hidden;
     }
-
-    /* Only apply extra height if screen is large AND tall */
-    @media screen and (min-width: 1024px) and (min-height: 800px) {
+    @media (min-width: 1024px) {
       .hero-section {
         min-height: 120vh;
       }
     }
-
     .hero-image-mobile img,
     .hero-image-desktop img {
       margin-bottom: -1px;
@@ -103,6 +99,7 @@
   </style>
 </head>
 <body class="bg-black text-white font-sans">
+
   <!-- Hero Section -->
   <section class="hero-section relative overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('Public/img/Background2.jpg');"></div>
@@ -156,7 +153,7 @@
             </div>
           </div>
           <div class="hero-image-mobile flex justify-center -mb-1">
-            <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full max-w-sm object-cover object-top rounded-lg" />
+            <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full max-w-sm object-cover object-top rounded-lg">
           </div>
         </div>
 
@@ -198,7 +195,7 @@
             </div>
           </div>
           <div class="hero-image-desktop flex justify-end -mb-1">
-            <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full h-[750px] object-cover object-center rounded-lg lg:rounded-none" />
+            <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full h-[750px] object-cover object-center rounded-lg lg:rounded-none">
           </div>
         </div>
       </div>
@@ -243,15 +240,15 @@
     </div>
   </footer>
 
-  <!-- ✅ JS Fix for Desktop Site Mode on Mobile -->
+  <!-- Fix for Desktop Site on Mobile -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const heroSection = document.querySelector(".hero-section");
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const isDesktopMode = window.innerWidth >= 1024 && isMobile;
+      const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const isFakeDesktop = window.innerWidth >= 1024 && isMobileDevice;
 
-      if (isDesktopMode && heroSection) {
-        heroSection.style.minHeight = window.innerHeight + "px";
+      if (isFakeDesktop && heroSection) {
+        heroSection.style.minHeight = "85vh";
       }
     });
   </script>

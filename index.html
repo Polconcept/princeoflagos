@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PrinceofLagos - Digital Business Strategist</title>
   <meta name="description" content="Daniel Akitoye popularly known as PrinceofLagos is a Digital Business Strategist and AI Compliance Consultant that builds, protects and scales empires.">
 
@@ -194,7 +194,9 @@
               </div>
             </div>
           </div>
-          <div class="hero-image-desktop flex justify-end -mb-1 lg:mt-24">
+
+          <!-- ✅ Updated line below -->
+          <div class="hero-image-desktop flex justify-end -mb-1 mt-0 lg:mt-32">
             <img src="Public/img/9.png" alt="Daniel Akitoye" class="w-full h-[750px] object-cover object-center rounded-lg lg:rounded-none">
           </div>
         </div>
@@ -246,12 +248,3 @@
       const heroSection = document.querySelector(".hero-section");
       const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       const isFakeDesktop = window.innerWidth >= 1024 && isMobileDevice;
-
-      if (isFakeDesktop && heroSection) {
-        heroSection.style.minHeight = "85vh";
-      }
-    });
-  </script>
-</body>
-</html>
-

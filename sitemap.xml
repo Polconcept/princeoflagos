@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://princeoflagos.com/</loc>
-    <lastmod>2025-08-07</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -12,25 +12,11 @@
   <!-- Remote Wealth Academy -->
   <url>
     <loc>https://remotewealth.academy/</loc>
-    <lastmod>2025-08-07</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- Instagram -->
-  <url>
-    <loc>https://www.instagram.com/princeoflagos__/</loc>
-    <lastmod>2025-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
-  </url>
 
-  <!-- Twitter / X -->
-  <url>
-    <loc>https://x.com/princeoflagos_/</loc>
-    <lastmod>2025-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
-  </url>
 
 </urlset>
